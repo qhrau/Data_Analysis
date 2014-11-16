@@ -6,3 +6,10 @@ Note: you will need to use pandas package. Also, you must use encoding = 'latin1
 For example,
 df = pd.read_csv(filename, encoding='latin1')
  where pd is the short form use of pandas (e.g., import pandas as pd) and df is a variable of type dataframe.
+ 
+import pandas as pd
+url = 'https://raw.githubusercontent.com/MIS407/Data_Analysis/master/Data/Titanic_train.csv'
+titanic = pd.read_csv(url)
+print('Passengers who survived on Titanic')
+survived = titanic.query('Survived == 1')
+print(survived)
